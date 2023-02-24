@@ -1,0 +1,359 @@
+
+*{
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.swiper{
+    min-height: 400px;
+    width: 100%;
+    user-select: none;
+}
+
+.swiper-slide{
+    height: 400px;
+}
+
+.swiper .swiper-slide .elements{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.swiper-button-prev, .swiper-button-next{
+    color:#2ebbcc;
+
+}
+.controller-bg{
+    background-color: #00000040;
+    height: 60px;
+    aspect-ratio: 1/1;
+    position:absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 20;
+    border-radius: 50%;
+    scale:75%;
+}
+.controller-bg:not(:first-child){
+    right:10px
+}
+.controller-bg:first-child{
+    left: 10px;
+}
+
+.controller-bg:not(:first-child)>*{
+    transform: translateX(-12.5%);
+}
+.controller-bg:first-child>*{
+    transform: translateX(12.5%);
+}
+
+.swiper .content{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+
+
+
+
+#slider-400px-1{
+    background-image: url("https://blummo.cl/wp-content/uploads/2023/02/Osorno-versus.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+#slider-400px-1>.blummo-logo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    aspect-ratio: 1/1;
+    height: 60%;
+    z-index: 5;
+}
+
+#slider-400px-1 .smoky-text{
+    text-transform: uppercase;
+    color:#05063b;
+    text-align: right;
+    background: linear-gradient(to bottom right, rgba(150,150,150,0.1), rgba(60,60,60,1));
+    height:50%;
+    width:50%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+#slider-400px-1 p.city{
+    font-size: 3em;
+    color:#05063b;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+#slider-400px-1 .smoky-text >p{
+    font-size: 2em;
+    font-weight: 900;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+#slider-400px-1 .smoky-text>p >span{
+    font-weight: 900;
+    color:#2ebbcc;
+}
+@media screen and (max-width: 800px){
+    #slider-400px-1>.blummo-logo{
+        height:45%
+    }  
+    #slider-400px-1 .smoky-text >p{
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 450px){
+    #slider-400px-1>.blummo-logo{
+        height:20%
+    }  
+    #slider-400px-1 .smoky-text >p{
+        font-size: 1.2em;
+    }
+}
+
+
+
+
+
+#slider-400px-2{
+    background-color: #faeed6;
+}
+
+
+#slider-400px-2 > .elements{
+    position: absolute;
+    bottom:0%;
+    left:0%;
+    width: 70%;
+    max-width: 800px;
+    max-height: 100%;
+    aspect-ratio: 2/1;
+}
+
+
+
+#slider-400px-2 .content >.text-box {
+    position: absolute;
+    right: 6%;
+    bottom: 50%;
+    width: 33%;
+    transform: translateY(50%);
+    max-height: 100%;
+}
+
+#slider-400px-2 .content >.text-box>p.title{
+    color: #c4763b;
+    font-size: 475%;
+    font-weight: 900;
+    width: fit-content;
+    line-height: 1;
+    
+}
+
+#slider-400px-2 .content >.text-box>p.par{
+    color: #05063b;
+    font-size: 220%;
+    font-weight: lighter;
+    
+}
+#slider-400px-2 .content >.text-box>p.par>span{
+    color: #05063b;
+    font-size: 80%;
+    font-weight: lighter;    
+}
+
+
+@media screen and (max-width:880px){
+    /*Añadir responsividad aquí*/
+}
+
+
+#slider-400px-3{
+    background-color: white;
+    color:black
+}
+
+#slider-400px-3 >.elements{
+    background-color: #05063b;
+    height: 33%;
+    width:calc(100% - 350px);
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    clip-path: polygon(0 0, 50px 100%, 100% 100%, 100% 0);
+}
+
+#slider-400px-3 .content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+    left:5%;
+}
+
+#slider-400px-3 .content >.frase{
+    font-size: min(6vw, 400%);
+    line-height: 1;
+    font-weight: 900;
+}
+
+#slider-400px-3 .content >.frase>span{
+    font-size: 0.5em;
+}
+
+#slider-400px-3 .content >.display-box{
+    height: 90%;
+    color: #2ebbcc;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#slider-400px-3 .content >.display-box>img{
+    height: min(80%, 20vw);
+    aspect-ratio: 1/1;
+}
+
+@media screen and (max-width:800px){
+    #slider-400px-3{
+        background-color: #05063b;
+        color: #2ebbcc;
+    }
+
+
+
+    #slider-400px-3 .content{
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        min-width:150px;
+
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    #slider-400px-3 .content >.display-box{
+        align-self: flex-start;
+        height: fit-content;
+    }
+
+    #slider-400px-3 .content >.display-box>img{
+        width: max(min(150px,30vw),105px);
+        aspect-ratio: 1/1;
+        align-self: center;
+    }
+    #slider-400px-3 .content >.frase{
+        flex-basis: 100%;
+        text-align: center;
+        font-size: 1.5em;
+        align-self: flex-end;
+    }
+}
+
+
+
+
+#slider-400px-4{
+    background-color: #05063b;
+    color: #faeed6;
+}
+#slider-400px-4>.elements{
+    height: 100%;
+    
+}
+#slider-400px-4>.elements>img{
+    height: 150%;
+    position: absolute;
+    right: -100px;
+}
+
+#slider-400px-4 > .content>p {
+    position:relative;
+    left:80px;
+}
+#slider-400px-4 > .content >p.title-container{
+    height: 70%;
+}
+/*Meter luego el código de slide 4*/
+
+#slider-400px-5{
+    background-color: #2ebbcc;
+    color:#fbca48
+}
+
+#slider-400px-5>img{
+    height: 100%;
+    position: absolute;
+    right: 0;
+
+}
+#slider-400px-5>.content{
+    width:calc(100% - 400px)
+}
+
+#slider-400px-5>.content>p.info{
+    width: calc(100%-40px);
+    background-color: #05063b;
+    padding: 20px;
+    font-size: 130%;
+
+}
+#slider-400px-5>.content>p.info>span{
+    display: none;
+}
+#slider-400px-5>.content>.frase{
+    position:absolute;
+    bottom: 0;
+    right: 5%;
+    width: min(90%, 1150px)
+}
+
+
+
+
+
+@media screen and (max-width:800px){
+    #slider-400px-5>img{
+        display:none
+    }
+    #slider-400px-5>.content{
+        width:100%
+    }
+    #slider-400px-5>.content>.frase{
+        position:absolute;
+        bottom: 20px;
+        right: 50%;
+        width: 80%;
+        transform: translateX(50%);
+    }
+}
+@media screen and (max-width:255px){
+    #slider-400px-5{
+        background-color: #05063b;
+        font-size: 90%;
+    }
+    #slider-400px-5>.content>p.info>span{
+        display: block;
+    }
+    #slider-400px-5>.content>.frase{
+        display: none;
+    }
+}
